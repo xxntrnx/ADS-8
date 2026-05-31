@@ -6,7 +6,7 @@
 
 template<typename T>
 class BST {
-private:
+ private:
     struct Node {
         T data;
         int freq;
@@ -62,7 +62,7 @@ private:
         return 1 + countNodes(node->left) + countNodes(node->right);
     }
 
-public:
+ public:
     BST() : root(nullptr) {}
 
     ~BST() {
