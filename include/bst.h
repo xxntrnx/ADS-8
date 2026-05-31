@@ -20,13 +20,11 @@ private:
     };
 
     Node* root;
-    int size;
 
     Node* insert(Node* node, const T& key) {
         if (node == nullptr) {
             return new Node(key);
         }
-
         if (key < node->key) {
             node->left = insert(node->left, key);
         } else if (key > node->key) {
@@ -49,15 +47,11 @@ private:
         return 1 + std::max(getDepth(node->left), getDepth(node->right));
     }
 
-    Node* search(Node* node, const T& key) const {
-        if (node == nullptr || node->key == key) {
-            return node;
-        }
-        if (key < node->key) {
-            return search(node->left, key);
-        } else {
-            return search(node->right, key);
-        }
+    int findCount(Node* node, const T& key) const {
+        if (node == nullptr) return 0;
+        if (key == node->key) return node->count;
+        if (key < node->key) return findCount(node->left, key);
+        return findCount(node->right, key);
     }
 
     void collectNodes(Node* node, std::vector<std::pair<T, int>>& nodes) const {
@@ -68,7 +62,7 @@ private:
     }
 
 public:
-    BST() : root(nullptr), size(0) {}
+    BST() : root(nullptr) {}
 
     ~BST() {
         clear(root);
@@ -82,13 +76,8 @@ public:
         return getDepth(root);
     }
 
-    bool search(const T& key) const {
-        return search(root, key) != nullptr;
-    }
-
-    int getCount(const T& key) const {
-        Node* node = search(root, key);
-        return node ? node->count : 0;
+    int search(const T& key) const {
+        return findCount(root, key);
     }
 
     std::vector<std::pair<T, int>> getSortedByKey() const {
