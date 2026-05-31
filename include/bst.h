@@ -5,6 +5,7 @@
 #include <iostream>
 #include <string>
 #include <algorithm>
+#include <vector>
 
 template<typename T>
 class BST {
@@ -17,7 +18,7 @@ private:
 
         Node(const T& k) : key(k), count(1), left(nullptr), right(nullptr) {}
     };
-    
+
     Node* root;
     int size;
 
@@ -35,7 +36,7 @@ private:
         }
         return node;
     }
-    
+
     void clear(Node* node) {
         if (node == nullptr) return;
         clear(node->left);
@@ -68,7 +69,7 @@ private:
 
 public:
     BST() : root(nullptr), size(0) {}
-    
+
     ~BST() {
         clear(root);
     }
