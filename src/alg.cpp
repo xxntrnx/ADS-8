@@ -1,10 +1,12 @@
 // Copyright 2021 NNTU-CS
 #include "bst.h"
+
+#include <cctype>
+#include <algorithm>
 #include <fstream>
 #include <iostream>
 #include <string>
 #include <vector>
-#include <algorithm>
 
 void makeTree(BST<std::string>& tree, const char* filename) {
     std::ifstream file(filename);
@@ -41,7 +43,7 @@ void makeTree(BST<std::string>& tree, const char* filename) {
 void printFreq(BST<std::string>& tree) {
     int total = tree.size();
     if (total == 0) return;
-    
+
     using NodePtr = BST<std::string>::NodeType*;
     std::vector<NodePtr> nodes(total);
     int idx = 0;
