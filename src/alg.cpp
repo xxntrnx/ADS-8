@@ -1,8 +1,7 @@
 // Copyright 2021 NNTU-CS
 #include "bst.h"
-#include <iostream>
 #include <fstream>
-#include <cctype>
+#include <iostream>
 #include <string>
 #include <vector>
 #include <algorithm>
@@ -10,24 +9,29 @@
 void makeTree(BST<std::string>& tree, const char* filename) {
     std::ifstream file(filename);
     if (!file) {
+        std::cout << "File error!" << std::endl;
         return;
     }
 
     std::string word;
-    char ch;
+    while (!file.eof()) {
+        int ch = file.get();
+        if (file.eof()) break;
 
-    while (file.get(ch)) {
-        if ((ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z')) {
-            word += std::tolower(ch);
-        } else {
-            if (!word.empty()) {
-                tree.insert(word);
-                word.clear();
+        if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z')) {
+            if (ch >= 'A' && ch <= 'Z') {
+                ch = ch - 'A' + 'a';
             }
+            word += static_cast<char>(ch);
+        } else {
+            if (word.size() > 1) {
+                tree.insert(word);
+            }
+            word.clear();
         }
     }
 
-    if (!word.empty()) {
+    if (word.size() > 1) {
         tree.insert(word);
     }
 
@@ -35,19 +39,26 @@ void makeTree(BST<std::string>& tree, const char* filename) {
 }
 
 void printFreq(BST<std::string>& tree) {
-    std::vector<std::pair<std::string, int>> words = tree.getSortedByKey();
+    int total = tree.size();
+    if (total == 0) return;
+    
+    using NodePtr = BST<std::string>::NodeType*;
+    std::vector<NodePtr> nodes(total);
+    int idx = 0;
+    tree.collectNodes(nodes.data(), idx);
 
-    std::sort(words.begin(), words.end(),
-        [](const std::pair<std::string, int>& a, 
-           const std::pair<std::string, int>& b) {
-            return a.second > b.second;
+    std::sort(nodes.begin(), nodes.begin() + idx,
+        [](const NodePtr& a, const NodePtr& b) {
+            if (a->freq != b->freq)
+                return a->freq > b->freq;
+            return a->data < b->data;
         });
 
     std::ofstream out("result/freq.txt");
 
-    for (const auto& item : words) {
-        std::cout << item.first << " " << item.second << std::endl;
-        out << item.first << " " << item.second << std::endl;
+    for (int i = 0; i < idx; i++) {
+        std::cout << nodes[i]->data << " " << nodes[i]->freq << std::endl;
+        out << nodes[i]->data << " " << nodes[i]->freq << std::endl;
     }
 
     out.close();
