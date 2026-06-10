@@ -2,7 +2,6 @@ the 34540
 and 22234
 to 16674
 of 14880
-a 10542
 he 9998
 in 8976
 that 8190
@@ -15,8 +14,6 @@ her 4725
 not 4676
 him 4637
 at 4530
-i 4522
-s 4403
 but 4049
 as 4023
 on 4002
@@ -60,7 +57,6 @@ out 1239
 my 1226
 natasha 1212
 man 1190
-t 1159
 andrew 1143
 could 1116
 we 1068
@@ -509,7 +505,6 @@ high 127
 remember 127
 bad 126
 money 126
-o 126
 present 126
 reason 126
 contrary 125
@@ -522,7 +517,6 @@ appeared 123
 camp 123
 course 123
 grew 123
-m 123
 become 122
 fine 122
 hundred 122
@@ -585,7 +579,6 @@ show 111
 year 111
 activity 110
 balashev 110
-d 110
 peace 110
 showed 110
 tomorrow 110
@@ -1187,7 +1180,6 @@ frowning 48
 highness 48
 joined 48
 joyful 48
-l 48
 members 48
 moments 48
 none 48
@@ -2019,7 +2011,6 @@ mason 25
 mine 25
 mingled 25
 mozhaysk 25
-n 25
 naive 25
 narrow 25
 perplexity 25
@@ -2194,7 +2185,6 @@ windows 23
 wing 23
 wolzogen 23
 wrapped 23
-x 23
 accounts 22
 active 22
 advised 22
@@ -2279,7 +2269,6 @@ teach 22
 tent 22
 uncomfortable 22
 until 22
-v 22
 vanished 22
 waved 22
 wealth 22
@@ -3106,7 +3095,6 @@ braunau 14
 bridges 14
 brushed 14
 bullet 14
-c 14
 cattle 14
 chances 14
 chin 14
@@ -3877,7 +3865,6 @@ attraction 10
 awakened 10
 awakening 10
 awe 10
-b 10
 backwards 10
 baron 10
 base 10
@@ -4210,7 +4197,6 @@ doll 9
 dorogomilov 9
 dozens 9
 dread 9
-e 9
 earthly 9
 eaten 9
 elders 9
@@ -4324,7 +4310,6 @@ predestined 9
 presenting 9
 quality 9
 queen 9
-r 9
 reappeared 9
 refrained 9
 regulations 9
@@ -4415,7 +4400,6 @@ woods 9
 wostov 9
 wrath 9
 xx 9
-y 9
 yielded 9
 zakhar 9
 ze 9
@@ -6513,7 +6497,6 @@ tugendbund 5
 turmoil 5
 twilight 5
 twisted 5
-u 5
 unattainable 5
 unbroken 5
 uncovered 5
@@ -6883,7 +6866,6 @@ experiences 4
 experiments 4
 exploit 4
 expressionless 4
-f 4
 factories 4
 faded 4
 fails 4
@@ -6972,7 +6954,6 @@ grumbled 4
 grumbling 4
 grunth 4
 guiding 4
-h 4
 hack 4
 hairs 4
 halves 4
@@ -7055,7 +7036,6 @@ irresolute 4
 irrevocable 4
 irritating 4
 issues 4
-j 4
 judges 4
 ken 4
 khvostikov 4
@@ -7504,7 +7484,6 @@ vivat 4
 voila 4
 voir 4
 voltaire 4
-w 4
 waddling 4
 wailed 4
 wallet 4
@@ -8469,7 +8448,6 @@ overpowered 3
 overwhelm 3
 owed 3
 ozheg 3
-p 3
 pad 3
 painstakingly 3
 pancake 3
@@ -9950,7 +9928,6 @@ fuller 2
 functions 2
 furrows 2
 furtively 2
-g 2
 gallantly 2
 galoshes 2
 ganze 2
@@ -11609,7 +11586,6 @@ yawn 2
 yawned 2
 yelp 2
 yelping 2
-z 2
 zakharych 2
 zaletaev 2
 zealously 2
@@ -14486,7 +14462,6 @@ jury 1
 justifiability 1
 justinian 1
 justness 1
-k 1
 kaftans 1
 kaiser 1
 kalisch 1
@@ -15702,7 +15677,6 @@ pwonounce 1
 pwovince 1
 pwovisions 1
 pyramid 1
-q 1
 quahtehmasteh 1
 quaint 1
 qualifications 1
