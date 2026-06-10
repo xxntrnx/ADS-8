@@ -24,14 +24,14 @@ void makeTree(BST<std::string>& tree, const char* filename) {
             }
             word += static_cast<char>(ch);
         } else {
-            if (word.size() > 1) {
+            if (word.size() > 0) {
                 tree.insert(word);
             }
             word.clear();
         }
     }
 
-    if (word.size() > 1) {
+    if (word.size() > 0) {
         tree.insert(word);
     }
 
